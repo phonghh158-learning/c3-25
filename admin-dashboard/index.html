@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="logo">NETFLIX</h2>
+        <ul>
+            <li class="active"><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
+            <li><i class="fas fa-film"></i> <span>Movie List</span></li>
+            <li><i class="fas fa-plus"></i> <span>Add Movies</span></li>
+            <li><i class="fas fa-list"></i> <span>Categories</span></li>
+            <li><i class="fas fa-users"></i> <span>Users</span></li>
+            <li><i class="fas fa-heart"></i> <span>Favorite Movies</span></li>
+            <li><i class="fas fa-key"></i> <span>Change Password</span></li>
+            <li><i class="fas fa-sign-out-alt"></i> <span>Log Out</span></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <div class="search-box">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search Movie Name here...">
+            </div>
+            <nav>
+                <a href="#">Movie</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user"></i>
+            </nav>
+        </header>
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="stats">
+                <div class="stat"><i class="fas fa-film"></i><p>Total Movies</p><h3>13</h3></div>
+                <div class="stat"><i class="fas fa-list"></i><p>Total Categories</p><h3>13</h3></div>
+                <div class="stat"><i class="fas fa-users"></i><p>Total Users</p><h3>5</h3></div>
+            </div>
+            <div class="recent-movies">
+                <h3>Recent Movies</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Language</th>
+                            <th>Year</th>
+                            <th>Hour</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="baywatch.jpg" alt="Baywatch" class="movie-img"></td>
+                            <td>Baywatch</td>
+                            <td>Romance</td>
+                            <td>English</td>
+                            <td>2022</td>
+                            <td>2h 10m</td>
+                            <td>
+                                <button class="edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="tron.jpg" alt="Tron" class="movie-img"></td>
+                            <td>Tron</td>
+                            <td>Drama</td>
+                            <td>English</td>
+                            <td>2020</td>
+                            <td>1h 50m</td>
+                            <td>
+                                <button class="edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="delete"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
