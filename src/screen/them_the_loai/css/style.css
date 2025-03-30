@@ -1,0 +1,480 @@
+.box {
+    flex: 1;
+    align-self: stretch;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #F20000;
+    border-radius: 3px;
+    border: none;
+    padding: 9px 10px;
+    text-align: left;
+}
+
+.button2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #F20000;
+    border-radius: 3px;
+    border: none;
+    padding: 7px 21px;
+    text-align: left;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 3px;
+    margin-right: 12px;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #0B0F29;
+    border-radius: 3px;
+    border: 1px solid #F9EEEE33;
+    padding-top: 47px;
+    padding-bottom: 121px;
+    margin-right: 21px;
+}
+
+.column3 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #0B0F29;
+    border-radius: 3px;
+    border: 1px solid #F9EEEE47;
+    padding-top: 15px;
+    padding-bottom: 89px;
+}
+
+.column4 {
+    align-self: stretch;
+    background: #080A1A;
+    border: 1px solid #FFFFFF36;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.column5 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.column6 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 17px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.column7 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 17px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.column8 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.column9 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+}
+
+.image {
+    width: 60px;
+    height: 22px;
+    margin-right: 31px;
+    object-fit: fill;
+}
+
+.image2 {
+    width: 10px;
+    height: 10px;
+    object-fit: fill;
+}
+
+.image3 {
+    width: 13px;
+    height: 13px;
+    margin-right: 32px;
+    object-fit: fill;
+}
+
+.image4 {
+    width: 15px;
+    height: 22px;
+    object-fit: fill;
+}
+
+.image5 {
+    width: 15px;
+    height: 12px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 23px;
+    object-fit: fill;
+}
+
+.image6 {
+    width: 15px;
+    height: 15px;
+    margin-right: 23px;
+    object-fit: fill;
+}
+
+.image7 {
+    width: 11px;
+    height: 11px;
+    object-fit: fill;
+}
+
+.image8 {
+    height: 1px;
+    align-self: stretch;
+    object-fit: fill;
+}
+
+.input {
+    color: #1E1E1E;
+    font-size: 8px;
+    margin-left: 23px;
+    align-self: stretch;
+    background: #D9D9D9;
+    border-radius: 3px;
+    border: none;
+    padding: 9px 36px 9px 18px;
+}
+
+.row-view {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #080A1A;
+    border: 1px solid #000000;
+    padding: 10px 21px;
+    margin-bottom: 47px;
+    box-shadow: 10px 10px 10px #00000040;
+    gap: 45px;
+    /* Giãn cách giữa các phần tử con */
+
+}
+
+.row-view2 {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 78px;
+    margin-left: 34px;
+    margin-right: 34px;
+}
+
+.row-view3 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 27px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.row-view4 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 17px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.row-view5 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 11px;
+    margin-left: 27px;
+}
+
+.row-view6 {
+    display: flex;
+    align-items: flex-start;
+    background: #D9D9D9;
+    border-radius: 3px;
+    padding: 8px 32px 8px 12px;
+    margin-bottom: 16px;
+    margin-left: 15px;
+}
+
+.row-view7 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 21px;
+    margin-left: 27px;
+}
+
+.row-view8 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 21px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.row-view9 {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 27px;
+}
+
+.row-view10 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 13px;
+    margin-left: 28px;
+}
+
+.row-view11 {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    background: #D9D9D9;
+    padding: 8px 17px;
+    margin-bottom: 24px;
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.row-view12 {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    margin-left: 21px;
+    margin-right: 21px;
+}
+
+.row-view13 {
+    display: flex;
+    align-items: flex-start;
+    background: #0B0F29;
+    border-radius: 2px;
+    border: 1px solid #F9EEEE33;
+    padding: 2px 3px 2px 7px;
+    margin-right: 8px;
+}
+
+.row-view14 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    margin-left: 21px;
+}
+
+.scroll-view {
+    height: 826px;
+    align-self: stretch;
+    background: #080A1A;
+}
+
+.text {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 28px;
+}
+
+.text2 {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    margin-right: 45px;
+}
+
+.text3 {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.text4 {
+    color: #FFFFFF;
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.text5 {
+    color: #F20000;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.text6 {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 318px;
+    width: 73px;
+}
+
+.text7 {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.text8 {
+    color: #000000;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 94px;
+    width: 7px;
+}
+
+.text9 {
+    color: #000000;
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 118px;
+    width: 18px;
+}
+
+.text10 {
+    color: #000000;
+    font-size: 7px;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 20px;
+}
+
+.text11 {
+    color: #000000;
+    font-size: 7px;
+    font-weight: bold;
+    width: 27px;
+}
+
+.text12 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 81px;
+    width: 16px;
+}
+
+.text13 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 93px;
+    width: 43px;
+}
+
+.text14 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    width: 34px;
+}
+
+.text15 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 5px;
+    width: 13px;
+}
+
+.text16 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 79px;
+    width: 18px;
+}
+
+.text17 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    width: 25px;
+}
+
+.text18 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    margin-right: 134px;
+    width: 22px;
+}
+
+.text19 {
+    color: #FFFFFF;
+    font-size: 7px;
+    font-weight: bold;
+    width: 22px;
+}
+
+.view {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #F20000;
+    border-radius: 2px;
+    padding: 1px 6px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    gap: 10px;
+    /* Khoảng cách giữa icon và input (tùy chọn) */
+}
+
+/* Tùy chỉnh lại style cho button nếu cần */
+.search-container .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 10px;
+    /* Điều chỉnh padding sao cho phù hợp với input */
+}
