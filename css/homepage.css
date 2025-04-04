@@ -1,0 +1,325 @@
+:root {
+    --primary-color: #d63447;
+    --primary-color-hover: #a92b3e;
+    --secondary-color: #1b1b1b;
+    --background-color: #f5f5f5;
+    --bar-color: #ededed;
+    --item-color: #dadada;
+    --text-color: #1b1b1b;
+    --text-color-light: #f8f8f8;
+    --sub-text-color: #555;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 1296px;
+    height: 400px;
+    padding-right: 84px;
+    margin-bottom: 72px;
+    background: url("../images/homepage/banner.png") no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    justify-content: right;
+    align-self: center;
+}
+.banner .banner-filter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.66);
+    z-index: 1;
+}
+
+.banner-fn {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+    align-items: flex-end;
+    z-index: 2;
+}
+
+.banner-fn .banner-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color-light);
+    text-align: right;
+}
+
+.banner-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: max-content;
+    height: max-content;
+    margin-bottom: 48px;
+
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--text-color-light);
+    text-align: right;
+}
+.banner-information .dot {
+    text-align: center;
+    margin: 0 36px;
+}
+
+.banner-buttons {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+}
+
+.banner-buttons .button {
+    display: flex;
+    height: 72px;
+    border-radius: 4px;
+    font-size: 36px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+.banner-buttons .button#button-wishlist {
+    width: 72px;
+    margin-right: 24px;
+    background-color: var(--item-color);
+}
+.banner-buttons .button#button-watch {
+    width: 180px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+.banner-buttons .button i {
+    margin-top: 10px;
+}
+
+
+/* Popular Movies */
+.popular-movies {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 1296px;
+    height: max-content;
+    margin-bottom: 72px;
+}
+
+.popular-movies .popular-movies-title {
+    display: flex;
+    flex-direction: row;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 32px;
+}
+
+.popular-movies .popular-movies-title .popular-movies-icon {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    margin-right: 32px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+.popular-movies .popular-movies-title .popular-movies-icon i {
+    margin-top: 8px;
+}
+
+.popular-movies .popular-movies-list {
+    display: grid;
+    width: 100%;
+    height: max-content;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    justify-items: center;
+}
+
+.popular-movies-list .movie-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 320px;
+    background: url("../images/homepage/poster.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.popular-movies-list .movie-item .information {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.movie-item .information .movie-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-light);
+    z-index: 2;
+}
+
+.movie-item .movie-information {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    margin-top: 4px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+.movie-item .item-fn {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 24px);
+    color: #f6dd00;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-star {
+    display: inline-block;
+    font-size: 20px; /* Kích thước sao */
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.rating-star::before {
+    content: "★★★★★"; /* 5 ngôi sao rỗng */
+    color: #ccc; /* Màu sao chưa được đánh giá */
+}
+
+.rating-star::after {
+    content: "★★★★★"; /* 5 ngôi sao */
+    color: #f6dd00; /* Màu sao đã được đánh giá */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--rating) * 20%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.rating-star[data-rating] {
+    --rating: attr(data-rating);
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+}
+
+.buttons .button {
+    display: flex;
+    height: 24px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+.buttons .button#button-wishlist {
+    width: 24px;
+    margin-right: 4px;
+    background-color: var(--item-color);
+}
+.buttons .button#button-watch {
+    width: 56px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+.buttons .button i {
+    margin-top: 4px;
+}
+
+
+
+/* ADS */
+.ads {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 1296px;
+    height: 301px;
+    padding: 36px 48px;
+    background-color: var(--bar-color);
+}
+
+.ads .ads-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 420px;
+    height: 235px;
+    object-fit: cover;
+}
+
+.ads .ads-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+    z-index: 1;
+}
+.ads .ads-description {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--text-color);
+    z-index: 1;
+}
+
+.ads .ads-download {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+    margin-top: 24px;
+    z-index: 1;
+}
+
+.ads .ads-download p {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-right: 16px;
+    text-decoration: underline;
+}
+
+.ads .ads-download a {
+    width: 96px;
+    height: 32px;
+    margin: 0 16px;
+    border-radius: 4px;
+}
+
+.ads .ads-download a img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
