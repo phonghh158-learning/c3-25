@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/filter-movies.css">
+    <title>Filter</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#">Movie</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a class="nav-icon">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="red-dot"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="filter-box">
+            <select name="genre" id="genre">
+                <option value="top-genre" disabled selected>All Categories</option>
+                <option value="action">Action</option>
+                <option value="animation">Animation</option>
+                <option value="horror">Horror</option>
+                <option value="romance">Romance</option>
+                <option value="sci-fi">Sci-Fi</option>
+                <option value="comedy">Comedy</option>
+                <option value="drama">Drama</option>
+                <option value="thriller">Thriller</option>
+                <option value="documentary">Documentary</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="romance">Romance</option>
+                <option value="thriller">Thriller</option>
+                <option value="war">War</option>
+                <option value="western">Western</option>
+                <option value="adventure">Adventure</option>
+                <option value="family">Family</option>
+                <option value="history">History</option>
+                <option value="musical">Musical</option>
+                <option value="sport">Sport</option>
+                <option value="superhero">Superhero</option>
+                <option value="biography">Biography</option>
+                <option value="crime">Crime</option>
+            </select>
+            <select name="language" id="language">
+                <option value="top-language" disabled selected>Language</option>
+                <option value="english">English</option>
+                <option value="vietnamese">Vietnamese</option>
+                <option value="korean">Korean</option>
+                <option value="japanese">Japanese</option>
+            </select>
+            <select name="year" id="year">
+                <option value="top-year" disabled selected>Release Years</option>
+            </select>            
+            <select name="rating" id="rating">
+                <option value="top-rating" disabled selected>Rating Star</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <p class="filter-result">Total <span style="color: var(--primary-color);">8</span> Movies</p>
+
+        <div class="movies-list">
+
+        </div>
+
+        <!-- Phân trang -->
+        <div class="pagination">
+        <!-- Nút phân trang sẽ được chèn ở đây -->
+</div>
+    </div>
+
+    <script src="../js/movies-data.js"></script>
+    <script src="../js/filter.js"></script>
+</body>
+</html>

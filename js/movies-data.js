@@ -1,0 +1,21 @@
+const movies = [
+    { name: "Doraemon: Stand By Me 2", genre: "Animation", year: 2020, poster: "../images/homepage/movie-item/doraemon.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Your Name", genre: "Animation", year: 2016, poster: "../images/homepage/movie-item/yourname.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Spirited Away", genre: "Animation", year: 2001, poster: "../images/homepage/movie-item/spiritedaway.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Demon Slayer: Mugen Train", genre: "Animation", year: 2020, poster: "../images/homepage/movie-item/demonslayer.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "A Silent Voice", genre: "Animation", year: 2016, poster: "../images/homepage/movie-item/silentvoice.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Inception", genre: "Sci-Fi", year: 2010, poster: "../images/homepage/movie-item/inception.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "The Dark Knight", genre: "Action", year: 2008, poster: "../images/homepage/movie-item/darkknight.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Titanic", genre: "Romance", year: 1997, poster: "../images/homepage/movie-item/titanic.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "The Godfather", genre: "Crime", year: 1972, poster: "../images/homepage/movie-item/godfather.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Interstellar", genre: "Sci-Fi", year: 2014, poster: "../images/homepage/movie-item/interstellar.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Mắt Biếc", genre: "romance", language: "vietnamese", year: 2019, rating: 4, poster: "mat-biec.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Parasite", genre: "thriller", language: "korean", year: 2019, rating: 5, poster: "parasite.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Coco", genre: "animation", language: "english", year: 2017, rating: 5, poster: "coco.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "The Matrix", genre: "sci-fi", language: "english", year: 1999, rating: 5, poster: "matrix.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Grave of the Fireflies", genre: "animation", language: "japanese", year: 1988, rating: 5, poster: "fireflies.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "La La Land", genre: "musical", language: "english", year: 2016, rating: 4, poster: "lalaland.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+    { name: "Dune", genre: "sci-fi", language: "english", year: 2021, rating: 4, poster: "dune.jpg" },
+    { name: "Weathering With You", genre: "animation", language: "japanese", year: 2019, rating: 5, poster: "weathering.jpg", rating: Math.floor(Math.random() * 5) + 1 },
+
+];
