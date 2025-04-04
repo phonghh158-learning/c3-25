@@ -1,0 +1,221 @@
+:root {
+    --primary-color: #d63447;
+    --primary-color-hover: #a92b3e;
+    --secondary-color: #1b1b1b;
+    --background-color: #f5f5f5;
+    --bar-color: #ededed;
+    --item-color: #dadada;
+    --text-color: #1b1b1b;
+    --text-color-light: #f8f8f8;
+    --sub-text-color: #555;
+    --font-family: 'Poppins', sans-serif;
+}
+
+/* Filter */
+.filter-box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 1296px;
+    height: 96px;
+    padding: 16px;
+    background-color: var(--bar-color);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-box select {
+    width: 22%;
+    min-width: 280px;
+    height: 64px;
+    font-size: 24px;
+    padding: 0 16px;
+}
+
+.filter-result {
+    width: max-content;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 32px 0;
+}
+
+
+/* Movies List */
+.movies-list {
+    display: grid;
+    width: 100%;
+    height: max-content;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+    justify-items: center;
+}
+
+.movies-list .movie-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 320px;
+    background: url("../images/homepage/poster.jpg") no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.movies-list .movie-item .information {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 96px;
+    padding: 8px 12px;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 1;
+}
+
+.movie-item .information .movie-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-light);
+    white-space: nowrap;       /* Không cho phép xuống dòng */
+    overflow: hidden;          /* Ẩn phần văn bản thừa */
+    text-overflow: ellipsis;   /* Thêm "..." khi văn bản quá dài */
+    width: 100%;               /* Đảm bảo tên phim chiếm hết chiều rộng */
+    z-index: 2;
+}
+
+.movie-item .movie-information {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    margin-top: 4px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-color-light);
+}
+
+.movie-item .item-fn {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 24px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-star {
+    display: inline-block;
+    font-size: 20px; /* Kích thước sao */
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.rating-star::before {
+    content: "★★★★★"; /* 5 ngôi sao rỗng */
+    color: var(--item-color); /* Màu sao chưa được đánh giá */
+}
+
+.rating-star::after {
+    content: "★★★★★"; /* 5 ngôi sao */
+    color: #f6dd00; /* Màu sao đã được đánh giá */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--rating) * 20%);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.rating-star[data-rating] {
+    --rating: calc(var(--rating) * 1%);
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    height: max-content;
+}
+
+.buttons .button {
+    display: flex;
+    height: 24px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+}
+.buttons .button#button-wishlist {
+    width: 24px;
+    margin-right: 4px;
+    background-color: var(--item-color);
+}
+.buttons .button#button-watch {
+    width: 56px;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+.buttons .button i {
+    margin-top: 4px;
+}
+
+
+/* Pagination */
+.pagination {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    margin-top: 32px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles cho pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-btn {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color); /* Màu nền của nút */
+    color: var(--text-color-light); /* Màu chữ của nút */
+    border: none;
+    font-size: 16px; /* Kích thước chữ */
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-btn:hover {
+    background-color: var(--primary-color-hover); /* Tạo hiệu ứng hover */
+}
+
+.page-btn.active {
+    background-color: var(--primary-color); /* Giữ màu nền cho trang đang được chọn */
+}
+
+.page-btn:disabled {
+    background-color: var(--sub-text-color); /* Màu cho nút bị vô hiệu hóa */
+    cursor: not-allowed; /* Thêm hiệu ứng không thể click */
+}
+
+.page-btn:focus {
+    outline: none; /* Loại bỏ viền khi nút được chọn */
+}
+
