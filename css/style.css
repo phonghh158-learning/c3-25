@@ -282,13 +282,13 @@ tbody tr:hover {
     outline: none; /* Loại bỏ viền khi nút được chọn */
 }
 
-.actions-buttons {
+.actions-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
 }
-.action-button {
+.btn-action {
     display: flex;
     width: 36px;
     height: 36px;
@@ -300,7 +300,7 @@ tbody tr:hover {
     cursor: pointer;
 }
 
-.action-button i {
+.btn-action i {
     margin-top: 6px;
     font-size: 20px;
     color: var(--text-color-light);
