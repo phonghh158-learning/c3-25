@@ -1,19 +1,25 @@
-const links = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('.section');
-
-links.forEach(link => {
-    link.addEventListener('click', (e) => {
+// Lắng nghe sự kiện click trên các liên kết trong thanh điều hướng
+document.querySelectorAll('.nav-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Remove active class from all links
-        links.forEach(l => l.classList.remove('active'));
-        // Add active class to clicked link
-        link.classList.add('active');
+        // Xóa class 'active' từ tất cả các liên kết
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.classList.remove('active');
+        });
 
-        // Hide all sections
-        sections.forEach(section => section.classList.add('hidden'));
-        // Show the clicked section
-        const sectionId = link.getAttribute('data-section');
-        document.getElementById(sectionId).classList.remove('hidden');
+        // Thêm class 'active' vào liên kết hiện tại
+        this.classList.add('active');
+
+        // Lấy phần tử cần hiển thị từ thuộc tính 'data-section' của liên kết
+        const sectionToShow = this.getAttribute('data-section');
+
+        // Ẩn tất cả các section
+        document.querySelectorAll('.section').forEach(function(section) {
+            section.classList.add('hidden');
+        });
+
+        // Hiển thị phần tử tương ứng
+        document.getElementById(sectionToShow).classList.remove('hidden');
     });
 });

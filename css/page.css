@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     width: 320px;
-    height: 100vh;
+    height: auto;
     min-height: 808px;
     padding-top: 72px;
     border-radius: 8px;
@@ -59,11 +59,10 @@
 .content {
     display: flex;
     flex-direction: column;
-    width: 940px;
+    width: calc(100% - 320px - 36px);
     min-width: 940px;
     height: 100%;
     min-height: 808px;
-    padding: 32px;
     margin-left: 36px;
     border-radius: 8px;
     background-color: var(--bar-color);
@@ -75,6 +74,83 @@
     margin-bottom: 32px;
 }
 
-.hidden {
+.section.hidden {
     display: none;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 940px;
+    padding: 32px;
+    height: auto;
+    min-height: 808px;
+}
+
+/* dashboard */
+
+#dashboard .dashboard-statistics {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 876px;
+    height: 158px;
+    border-radius: 8px;
+    padding: 32px;
+    background-color: var(--item-color);
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dashboard .dashboard-statistics .item {
+    display: flex;
+    flex-direction: row;
+    width: 32%;
+    min-width: 250px;
+    height: 94px;
+    border-radius: 8px;
+    background-color: var(--background-color);
+    align-items: center;
+}
+
+#dashboard .dashboard-statistics .item .icon {
+    display: flex;
+    width: 64px;
+    height: 64px;
+    margin: 0 16px;
+    border-radius: 999px;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+#dashboard .dashboard-statistics .item .icon i {
+    margin-top: 10px;
+}
+
+#dashboard .dashboard-statistics .item .info {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#dashboard .dashboard-statistics .item .info .item-name,
+#dashboard .dashboard-statistics .item .info .item-value {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+#dashboard .dashboard-statistics .item .info .item-value {
+    color: var(--primary-color);
+}
+
+#dashboard .recent-movies .title {
+    margin: 32px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--sub-text-color);
 }
