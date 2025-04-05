@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
+        </div>
+        
+        <nav class="nav-links">
+            <a href="#">Movie</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a class="nav-icon">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="red-dot"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="sidebar">
+            <ul>
+                <a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="fi fi-rr-dashboard"></i> Dashboard
+                </a>
+                <a href="#" class="nav-link" data-section="movies-list">
+                    <i class="fi fi-rr-film"></i> Movies List
+                </a>
+                <a href="#" class="nav-link" data-section="favorites-movies">
+                    <i class="fi fi-rr-heart"></i> Favorites Movies
+                </a>
+                <a href="#" class="nav-link" data-section="add-movies">
+                    <i class="fi fi-rr-add-document"></i> Add Movies
+                </a>
+                <a href="#" class="nav-link" data-section="categories">
+                    <i class="fi fi-rr-folder"></i> Categories</a>
+                <a href="#" class="nav-link" data-section="users-manager">
+                    <i class="fi fi-rr-user"></i> Users Manager
+                </a>
+                <a href="#" class="nav-link" data-section="profile">
+                    <i class="fi fi-rr-user-settings"></i> Profile
+                </a>
+                <a href="#" class="nav-link" data-section="logout">
+                    <i class="fi fi-rr-sign-out"></i> Logout
+                </a>
+            </ul>
+        </nav>
+
+        <!-- Content -->
+        <div class="content">
+            <div id="dashboard" class="section">
+                <div class="title">DASHBOARD</div>
+                <div class="dashboard-statistics">
+                    <div class="item">
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="movies-list" class="section hidden">
+                <div class="title">Dashboard</div>
+            </div>
+            <div id="favorites-movies" class="section hidden"><div class="title">Dashboard</div></div>
+            <div id="add-movies" class="section hidden"><div class="title">Dashboard</div></div>
+            <div id="categories" class="section hidden"><div class="title">Dashboard</div></div>
+            <div id="users-manager" class="section hidden"><div class="title">Dashboard</div></div>
+            <div id="profile" class="section hidden"><div class="title">Dashboard</div></div>
+            <div id="logout" class="section hidden"><div class="title">Dashboard</div></div>
+        </div>
+    
+    </div>
+
+</body>
+</html>
