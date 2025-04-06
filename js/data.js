@@ -34,21 +34,20 @@ const categories = [
     { id: "0012", name: "Musical", created_at: "2019-12-01" }
 ];
 
-
 const users = [
-    { id: "0001", fullname: "Nguyễn Văn A", email: "vana@example.com", role: "user" },
-    { id: "0002", fullname: "Trần Thị B", email: "thib@example.com", role: "admin" },
-    { id: "0003", fullname: "Lê Văn C", email: "vanc@example.com", role: "user" },
-    { id: "0004", fullname: "Phạm Thị D", email: "thid@example.com", role: "user" },
-    { id: "0005", fullname: "Hoàng Văn E", email: "vane@example.com", role: "admin" },
-    { id: "0006", fullname: "Đỗ Thị F", email: "thif@example.com", role: "user" },
-    { id: "0007", fullname: "Bùi Văn G", email: "vang@example.com", role: "user" },
-    { id: "000", fullname: "Võ Thị H", email: "thih@example.com", role: "user" },
-    { id: "0009", fullname: "Lý Văn I", email: "vani@example.com", role: "admin" },
-    { id: "0010", fullname: "Ngô Thị J", email: "thij@example.com", role: "user" },
-    { id: "0011", fullname: "Mai Văn K", email: "vank@example.com", role: "user" },
-    { id: "0012", fullname: "Tạ Thị L", email: "thil@example.com", role: "user" },
-    { id: "0013", fullname: "Đinh Văn M", email: "vanm@example.com", role: "admin" }
+    { id: "0001", fullname: "Nguyễn Văn A", email: "vana@example.com", role: "user", password: "pass123" },
+    { id: "0002", fullname: "Trần Thị B", email: "thib@example.com", role: "admin", password: "admin456" },
+    { id: "0003", fullname: "Lê Văn C", email: "vanc@example.com", role: "user", password: "123456" },
+    { id: "0004", fullname: "Phạm Thị D", email: "thid@example.com", role: "user", password: "abc123" },
+    { id: "0005", fullname: "Hoàng Văn E", email: "vane@example.com", role: "admin", password: "admin123" },
+    { id: "0006", fullname: "Đỗ Thị F", email: "thif@example.com", role: "user", password: "pass456" },
+    { id: "0007", fullname: "Bùi Văn G", email: "vang@example.com", role: "user", password: "qwerty" },
+    { id: "0008", fullname: "Võ Thị H", email: "thih@example.com", role: "user", password: "thih123" },
+    { id: "0009", fullname: "Lý Văn I", email: "vani@example.com", role: "admin", password: "lyi789" },
+    { id: "0010", fullname: "Ngô Thị J", email: "thij@example.com", role: "user", password: "user0010" },
+    { id: "0011", fullname: "Mai Văn K", email: "vank@example.com", role: "user", password: "vank0011" },
+    { id: "0012", fullname: "Tạ Thị L", email: "thil@example.com", role: "user", password: "thil0012" },
+    { id: "0013", fullname: "Đinh Văn M", email: "vanm@example.com", role: "admin", password: "vanm0013" }
 ];
 
 const favoriteMovies = [
