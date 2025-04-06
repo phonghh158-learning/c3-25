@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/page.css">
     <title>Dashboard</title>
@@ -59,10 +60,10 @@
                     <i class="fi fi-rr-user"></i> Users Manager
                 </a>
                 <a href="#" class="nav-link" data-section="profile">
-                    <i class="fi fi-rr-user-settings"></i> Profile
+                    <i class="fi fi-rr-book-user"></i> Profile
                 </a>
                 <a href="#" class="nav-link" data-section="logout">
-                    <i class="fi fi-rr-sign-out"></i> Logout
+                    <i class="fi fi-rr-exit"></i> Logout
                 </a>
             </ul>
         </nav>
@@ -191,16 +192,32 @@
                     <!-- Phần tải lên -->
                     <div class="movie-upload">
                         <div class="upload-image">
-                            <label for="portrait-poster">Upload Portrait Poster:</label>
-                            <input type="file" id="portrait-poster" name="portrait-poster" accept="image/*">
-                            
-                            <label for="landscape-banner">Upload Landscape Banner:</label>
-                            <input type="file" id="landscape-banner" name="landscape-banner" accept="image/*">
+                            <label class="upload-box" id="portrait-poster">
+                                <input type="file" name="portrait-poster" accept="image/*" hidden>
+                                <div class="upload-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload <br> Portrait Poster</p>
+                                </div>
+                            </label>
+                            <label class="upload-box" id="landscape-banner">
+                                <input type="file" name="landscape-banner" accept="image/*" hidden>
+                                <div class="upload-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload Landscape Banner</p>
+                                </div>
+                            </label>
                         </div>
                         
                         <div class="upload-video">
-                            <label for="movie-file">Upload Movie:</label>
-                            <input type="file" id="movie-file" name="movie-file" accept="video/*">
+                            <label class="upload-box">
+                                <input type="file" id="movie-file" name="movie-file" accept="video/*" hidden>
+                                <div class="upload-frame">
+                                    <div class="btn-upload-video">
+                                        <i class="fi fi-bs-upload"></i>
+                                    </div>
+                                    <p>Upload Movie</p>
+                                </div>
+                            </label>
                         </div>
                     </div>
             

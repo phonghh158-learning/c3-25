@@ -253,3 +253,87 @@
     padding: 8px 16px;
     border-radius: 4px;
 }
+
+.add-movie-form .movie-upload .upload-image {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: max-content;
+    min-height: 320px;
+    gap: 32px;
+}
+.add-movie-form .movie-upload .upload-image label {
+    position: relative;
+    border-radius: 8px;
+    background-color: var(--item-color);
+    cursor: pointer;
+}
+.add-movie-form .movie-upload .upload-image #portrait-poster {
+    width: 240px;
+    height: 320px;
+}
+.add-movie-form .movie-upload .upload-image #landscape-banner {
+    width: calc(100% - 240px - 32px);
+    min-width: 540px;
+    height: 320px;
+}
+.add-movie-form .movie-upload .upload-image .upload-box .upload-frame {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    width: max-content;
+    height: max-content;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.upload-image .upload-frame i {
+    font-size: 96px;
+    line-height: 96px;
+    color: var(--primary-color);
+}
+.upload-image .upload-frame p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+}
+.add-movie-form .movie-upload .upload-video .upload-box {
+    cursor: pointer;
+}
+.add-movie-form .movie-upload .upload-video .upload-box .upload-frame {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    gap: 16px;
+    background-color: var(--item-color);
+    border-radius: 8px;
+    align-items: center;
+}
+.add-movie-form .movie-upload .upload-video .upload-box .upload-frame .btn-upload-video {
+    display: flex;
+    width: 84px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+}
+.add-movie-form .movie-upload .upload-video .upload-box .upload-frame i {
+    margin-top: 4px;
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--text-color-light);
+}
+.add-movie-form .movie-upload .upload-video .upload-box .upload-frame p {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
+}
