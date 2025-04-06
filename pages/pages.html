@@ -21,16 +21,16 @@
         </div>
         
         <nav class="nav-links">
-            <a href="#">Movie</a>
+            <a href="/pages/filter-movie.html">Movie</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
         </nav>
 
         <div class="nav-icons">
-            <a class="nav-icon">
+            <a href="#" class="nav-icon" id="user">
                 <i class="fi fi-rr-user"></i>
             </a>
-            <a class="nav-icon">
+            <a href="#" class="nav-icon">
                 <i class="fi fi-rr-bell"></i>
                 <span class="red-dot"></span>
             </a>
@@ -319,6 +319,44 @@
             </div>
             <div id="profile" class="section hidden">
                 <div class="title">Profile</div>
+                <div class="profile">
+                    <form class="form-profile">
+                        <div class="profile-information">
+                            <label class="avatar">
+                                <input type="file" name="avatar" accept="image/*" hidden>
+                                <img src="" alt="avatar" id="avatar" class="avatar-img">
+                                <div class="avatar-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload Avatar</p>
+                                </div>
+                            </label>
+                            <div class="profile-details">
+                                <div class="row">
+                                    <label for="fullname">Fullname:</label>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Enter your fullname" required>
+                                </div>
+                                <div class="row">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="profile-btn" id="profile-information-btn">Update</button>
+                    </form>
+                    <form class="form-change-password">
+                        <div class="profile-change-password">
+                            <div class="row">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="row">
+                                <label for="confirm-password">Confirm Password:</label>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter your confirm password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="profile-btn" id="profile-change-password-btn">Change Password</button>
+                    </form>
+                </div>
             </div>
             <div id="logout" class="section hidden">
                 <div class="title">Logout</div>
