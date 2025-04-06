@@ -1,78 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        .signup-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-
-        .signup-box {
-            background-color: var(--background-color);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            width: 350px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .signup-box input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid var(--item-color);
-            border-radius: 5px;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        .signup-box input:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        .signup-btn {
-            background-color: var(--primary-color);
-            color: var(--text-color-light);
-            border: none;
-            padding: 10px;
-            width: 100%;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .signup-btn:hover {
-            background-color: var(--primary-color-hover);
-        }
-
-        .signup-btn i {
-            margin-right: 5px;
-        }
-
-        p a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        p a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Sign Up</title>
 </head>
-
 <body>
     <!-- Header -->
     <header class="header">
@@ -100,16 +35,40 @@
             </a>
         </div>
     </header>
-    <div class="signup-container">
-        <div class="signup-box">
-            <div class="register-text" style="font-size: 24px; font-weight: 600; color: var(--primary-color);">REGISTER</div>
-            <input type="text" placeholder="Fullname">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button class="signup-btn"><i class="fas fa-sign-in-alt"></i> Sign Up</button>
-            <p style="margin-top: 16px">Already have an account? <a href="/auth/signin.html">Sign In</a></p>
+    <div class="container">
+        <div class="register-section">
+            <div class="title">
+                <p>Register</p>
+            </div>
+            <form class="register-form" id="register-form">
+                <label for="fullname">Fullname</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                
+                <div class="message" id="error" style="display: none;">
+                    <p>Registration successful!</p>
+                </div>
+                <div class="message" id="success" style="display: none;">
+                    <p>Registration successful!</p>
+                    <a href="/auth/signin.html">Login Now</a>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+            <p style="margin-top: 24px;">Already have an account? <a style="text-decoration: underline; color: var(--primary-color);" href="/auth/signin.html">Sign In</a></p>
         </div>
     </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/register.js"></script>
 </body>
 
 </html>

@@ -128,9 +128,11 @@
     margin-right: 32px;
     background-color: var(--primary-color);
     color: var(--text-color-light);
+    align-items: center;
+    justify-content: center;
 }
 .popular-movies .popular-movies-title .popular-movies-icon i {
-    margin-top: 8px;
+    margin-top: 12px;
 }
 
 .popular-movies .popular-movies-list {

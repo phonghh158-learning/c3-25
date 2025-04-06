@@ -4,76 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        .signin-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            padding: 20px;
-        }
-
-        .signin-box {
-            background-color: var(--background-color);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            width: 350px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .signin-box input {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid var(--item-color);
-            border-radius: 5px;
-            background-color: var(--background-color);
-            color: var(--text-color-light);
-        }
-
-        .signin-box input:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
-
-        .signin-btn {
-            background-color: var(--primary-color);
-            color: var(--text-color-light);
-            border: none;
-            padding: 10px;
-            width: 100%;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 15px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .signin-btn:hover {
-            background-color: var(--primary-color-hover);
-        }
-
-        .signin-btn i {
-            margin-right: 5px;
-        }
-
-        p a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        p a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Sign In</title>
 </head>
-
 <body>
     <!-- Header -->
     <header class="header">
@@ -101,15 +36,26 @@
             </a>
         </div>
     </header>
-    <div class="signin-container">
-        <div class="signin-box">
-            <div class="signin-text" style="font-size: 24px; font-weight: bold; color: var(--primary-color);">SIGN IN</div>
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button class="signin-btn"><i class="fas fa-sign-in-alt"></i> Sign In</button>
-            <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    <div class="login-section">
+        <div class="title">
+            <p>Login</p>
         </div>
+        <form class="login-form">
+            <label for="login-email">Email</label>
+            <input type="text" id="login-email" name="email" required>
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+            
+            <div class="message" id="error" style="display: none;">
+                <p>Registration successful!</p>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
     </div>
+
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
