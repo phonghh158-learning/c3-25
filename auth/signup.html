@@ -4,68 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflixy Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            /* Đổi nền thành màu trắng */
-            color: #333;
-            /* Đổi màu chữ thành màu tối */
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background-color: #000;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: red;
-        }
-
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input {
-            padding: 8px;
-            width: 250px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .search-bar button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            cursor: pointer;
-            margin-left: 5px;
-            border-radius: 5px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-
-        nav i {
-            color: red;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-
         .signup-container {
             display: flex;
             justify-content: center;
@@ -74,14 +17,12 @@
         }
 
         .signup-box {
-            background-color: #f9f9f9;
-            /* Đổi nền form thành màu xám nhạt */
+            background-color: var(--background-color);
             padding: 40px;
             border-radius: 10px;
             text-align: center;
             width: 350px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            /* Thêm bóng đổ nhẹ */
         }
 
         .signup-box input {
@@ -89,20 +30,20 @@
             width: 100%;
             padding: 10px;
             margin: 10px 0;
-            border: 1px solid #ccc;
+            border: 1px solid var(--item-color);
             border-radius: 5px;
-            background-color: #fff;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
 
         .signup-box input:focus {
-            border-color: red;
+            border-color: var(--primary-color);
             outline: none;
         }
 
         .signup-btn {
-            background-color: red;
-            color: white;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
             border: none;
             padding: 10px;
             width: 100%;
@@ -114,7 +55,7 @@
         }
 
         .signup-btn:hover {
-            background-color: #b00710;
+            background-color: var(--primary-color-hover);
         }
 
         .signup-btn i {
@@ -122,7 +63,7 @@
         }
 
         p a {
-            color: red;
+            color: var(--primary-color);
             text-decoration: none;
         }
 
@@ -133,28 +74,40 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">NETFLXY</div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Movie Name from here">
-            <button><i class="fas fa-search"></i></button>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
         </div>
-        <nav>
-            <a href="#">Movie</a>
+        
+        <nav class="nav-links">
+            <a href="/pages/filter-movie.html">Movie</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
-            <i class="fas fa-user"></i>
-            <i class="fas fa-heart"></i>
         </nav>
+
+        <div class="nav-icons">
+            <a href="#" class="nav-icon" id="user">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a href="#" class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="var(--primary-color)-dot"></span>
+            </a>
+        </div>
     </header>
     <div class="signup-container">
         <div class="signup-box">
-            <div class="logo">NETFLXY</div>
+            <div class="register-text" style="font-size: 24px; font-weight: 600; color: var(--primary-color);">REGISTER</div>
             <input type="text" placeholder="Fullname">
             <input type="email" placeholder="Email">
             <input type="password" placeholder="Password">
             <button class="signup-btn"><i class="fas fa-sign-in-alt"></i> Sign Up</button>
-            <p>Already have an account? <a href="#">Sign In</a></p>
+            <p style="margin-top: 16px">Already have an account? <a href="/auth/signin.html">Sign In</a></p>
         </div>
     </div>
 </body>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/page.css">
     <title>Dashboard</title>
@@ -20,16 +21,16 @@
         </div>
         
         <nav class="nav-links">
-            <a href="#">Movie</a>
+            <a href="/pages/filter-movie.html">Movie</a>
             <a href="#">About Us</a>
             <a href="#">Contact Us</a>
         </nav>
 
         <div class="nav-icons">
-            <a class="nav-icon">
+            <a href="#" class="nav-icon" id="user">
                 <i class="fi fi-rr-user"></i>
             </a>
-            <a class="nav-icon">
+            <a href="#" class="nav-icon">
                 <i class="fi fi-rr-bell"></i>
                 <span class="red-dot"></span>
             </a>
@@ -59,10 +60,10 @@
                     <i class="fi fi-rr-user"></i> Users Manager
                 </a>
                 <a href="#" class="nav-link" data-section="profile">
-                    <i class="fi fi-rr-user-settings"></i> Profile
+                    <i class="fi fi-rr-book-user"></i> Profile
                 </a>
                 <a href="#" class="nav-link" data-section="logout">
-                    <i class="fi fi-rr-sign-out"></i> Logout
+                    <i class="fi fi-rr-exit"></i> Logout
                 </a>
             </ul>
         </nav>
@@ -78,7 +79,7 @@
                         </div>
                         <div class="info">
                             <div class="item-name">Total Movies</div>
-                            <div class="item-value">333</div>
+                            <div class="item-value"></div>
                         </div>
                     </div>
                     <div class="item" id="total-categories">
@@ -87,7 +88,7 @@
                         </div>
                         <div class="info">
                             <div class="item-name">Total Categories</div>
-                            <div class="item-value">12</div>
+                            <div class="item-value"></div>
                         </div>
                     </div>
                     <div class="item" id="total-users">
@@ -96,13 +97,13 @@
                         </div>
                         <div class="info">
                             <div class="item-name">Total Users</div>
-                            <div class="item-value">3</div>
+                            <div class="item-value"></div>
                         </div>
                     </div>
                 </div>
                 <div class="recent-movies">
                     <div class="title">Recent Movies</div>
-                    <table id="movies-table">
+                    <table>
                         <colgroup>
                             <col span="1" style="width: 10%;">
                             <col span="1" style="width: 30%;">
@@ -126,37 +127,247 @@
                         </tbody>
                     </table>
                     <!-- Phân trang -->
-                    <div class="pagination"></div>
+                    <div class="pagination" id="dashboard-pagination"></div>
                 </div>
             </div>
             <div id="movies-list" class="section hidden">
                 <div class="title">Movies List</div>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 17.5%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 12.5%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Genre</th>
+                            <th>Language</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu movie sẽ được render ở đây -->
+                    </tbody>
+                </table>
+                <!-- Phân trang -->
+                <div class="pagination" id="movies-list-pagination"></div>
             </div>
             <div id="favorites-movies" class="section hidden">
                 <div class="title">Favorites Movies</div>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 17.5%;">
+                        <col span="1" style="width: 20%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 12.5%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Genre</th>
+                            <th>Language</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu movie sẽ được render ở đây -->
+                    </tbody>
+                </table>
+                <!-- Phân trang -->
+                <div class="pagination" id="favorites-movies-pagination"></div>
             </div>
             <div id="add-movies" class="section hidden">
                 <div class="title">Add Movies</div>
+                <form action="/submit-movie" method="post" class="add-movie-form">
+                    <!-- Phần tải lên -->
+                    <div class="movie-upload">
+                        <div class="upload-image">
+                            <label class="upload-box" id="portrait-poster">
+                                <input type="file" name="portrait-poster" accept="image/*" hidden>
+                                <div class="upload-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload <br> Portrait Poster</p>
+                                </div>
+                            </label>
+                            <label class="upload-box" id="landscape-banner">
+                                <input type="file" name="landscape-banner" accept="image/*" hidden>
+                                <div class="upload-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload Landscape Banner</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="upload-video">
+                            <label class="upload-box">
+                                <input type="file" id="movie-file" name="movie-file" accept="video/*" hidden>
+                                <div class="upload-frame">
+                                    <div class="btn-upload-video">
+                                        <i class="fi fi-bs-upload"></i>
+                                    </div>
+                                    <p>Upload Movie</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+            
+                    <!-- Phần thông tin chi tiết -->
+                    <div class="movie-information">
+                        <div class="row" id="row-1">
+                            <div class="row-item">
+                                <label for="movie-name">Movie Name:</label>
+                                <input type="text" id="movie-name" name="movie-name" placeholder="Enter movie name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row" id="row-2">
+                            <div class="row-item">
+                                <label for="release-year">Release Year:</label>
+                                <select id="release-year" name="release-year" required>
+                                    <option disabled selected>Select Release Year</option>
+                                    <!-- Dữ liệu year sẽ được render ở đây -->
+                                </select>
+                            </div>
+                            
+                            <div class="row-item">
+                                <label for="language">Language:</label>
+                                <select id="language" name="language">
+                                    <option disabled selected>Select Language</option>
+                                    <!-- Dữ liệu year sẽ được render ở đây -->
+                                </select>
+                            </div>
+                            
+                            <div class="row-item">
+                                <label for="genre">Genre:</label>
+                                <select id="genre" name="genre">
+                                    <option disabled selected>Select Genre</option>
+                                    <!-- Dữ liệu year sẽ được render ở đây -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row" id="row-3">
+                            <div class="row-item">
+                                <label for="movie-description">Movie Description:</label>
+                                <textarea id="movie-description" name="movie-description" rows="5" placeholder="Enter movie description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <button type="submit" class="publish-button">Publish Movie</button>
+                </form>
             </div>
             <div id="categories" class="section hidden">
                 <div class="title">Categories</div>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 35%;">
+                        <col span="1" style="width: 35%;">
+                        <col span="1" style="width: 20%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>DATE</th>
+                            <th>CATEGORY</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu movie sẽ được render ở đây -->
+                    </tbody>
+                </table>
+                <!-- Phân trang -->
+                <div class="pagination" id="categories-pagination"></div>
             </div>
             <div id="users-manager" class="section hidden">
                 <div class="title">Users Manager</div>
+                <table>
+                    <colgroup>
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 30%;">
+                        <col span="1" style="width: 35%;">
+                        <col span="1" style="width: 10%;">
+                        <col span="1" style="width: 15%;">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>FULLNAME</th>
+                            <th>EMAIL</th>
+                            <th>ROLE</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu movie sẽ được render ở đây -->
+                    </tbody>
+                </table>
+                <!-- Phân trang -->
+                <div class="pagination" id="users-manager-pagination"></div>
             </div>
             <div id="profile" class="section hidden">
                 <div class="title">Profile</div>
+                <div class="profile">
+                    <form class="form-profile">
+                        <div class="profile-information">
+                            <label class="avatar">
+                                <input type="file" name="avatar" accept="image/*" hidden>
+                                <img src="" alt="avatar" id="avatar" class="avatar-img">
+                                <div class="avatar-frame">
+                                    <i class="fi fi-bs-upload"></i>
+                                    <p>Upload Avatar</p>
+                                </div>
+                            </label>
+                            <div class="profile-details">
+                                <div class="row">
+                                    <label for="fullname">Fullname:</label>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Enter your fullname" required>
+                                </div>
+                                <div class="row">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="profile-btn" id="profile-information-btn">Update</button>
+                    </form>
+                    <form class="form-change-password">
+                        <div class="profile-change-password">
+                            <div class="row">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                            </div>
+                            <div class="row">
+                                <label for="confirm-password">Confirm Password:</label>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter your confirm password" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="profile-btn" id="profile-change-password-btn">Change Password</button>
+                    </form>
+                </div>
             </div>
             <div id="logout" class="section hidden">
                 <div class="title">Logout</div>
             </div>
         </div>
-    
     </div>
 
     <script src="../js/script.js"></script>
-    <script src="../js/page.js"></script>
     <script src="../js/data.js"></script>
+    <script src="../js/page.js"></script>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/add-movie.js"></script>
 </body>
 </html>

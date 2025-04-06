@@ -8,6 +8,7 @@
     --bar-color: #ededed;
     --item-color: #dadada;
     --text-color: #1b1b1b;
+    --text-color-light: #f8f8f8;
     --sub-text-color: #555;
     --font-family: 'Poppins', sans-serif;
 }
@@ -282,13 +283,13 @@ tbody tr:hover {
     outline: none; /* Loại bỏ viền khi nút được chọn */
 }
 
-.actions-buttons {
+.actions-button {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 8px;
 }
-.action-button {
+.btn-action {
     display: flex;
     width: 36px;
     height: 36px;
@@ -300,7 +301,7 @@ tbody tr:hover {
     cursor: pointer;
 }
 
-.action-button i {
+.btn-action i {
     margin-top: 6px;
     font-size: 20px;
     color: var(--text-color-light);
