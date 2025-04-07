@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2 class="logo">NETFLIX</h2>
+        <ul>
+            <li><i class="fas fa-chart-line"></i> <span>Dashboard</span></li>
+            <li class="active"><i class="fas fa-film"></i> <span>Movie List</span></li>
+            <li><i class="fas fa-plus"></i> <span>Add Movies</span></li>
+            <li><i class="fas fa-list"></i> <span>Categories</span></li>
+            <li><i class="fas fa-users"></i> <span>Users</span></li>
+            <li><i class="fas fa-heart"></i> <span>Favorite Movies</span></li>
+            <li><i class="fas fa-key"></i> <span>Change Password</span></li>
+            <li><i class="fas fa-sign-out-alt"></i> <span>Log Out</span></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="search-box">
+                <button><i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Search Movie...">
+            </div>
+            <nav>
+                <a href="#">Movie</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-user"></i>
+            </nav>
+        </header>
+
+        <section class="movie-list">
+            <div class="table-header">
+                <h2>Movie List</h2>
+                <button class="delete-all"><i class="fas fa-trash"></i> Delete All</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Language</th>
+                        <th>Year</th>
+                        <th>Hour</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="inception.jpg" alt="Inception" class="movie-img"></td>
+                        <td>Inception</td>
+                        <td>Sci-Fi</td>
+                        <td>English</td>
+                        <td>2010</td>
+                        <td>2h 28m</td>
+                        <td>
+                            <button class="edit"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="parasite.jpg" alt="Parasite" class="movie-img"></td>
+                        <td>Parasite</td>
+                        <td>Thriller</td>
+                        <td>Korean</td>
+                        <td>2019</td>
+                        <td>2h 20m</td>
+                        <td>
+                            <button class="edit"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="delete"><i class="fas fa-trash"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+</html>
