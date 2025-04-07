@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Sign In</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
+        </div>
+        
+        <nav class="nav-links">
+            <a href="/pages/filter-movie.html">Movie</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" class="nav-icon" id="user">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a href="#" class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="var(--primary-color)-dot"></span>
+            </a>
+        </div>
+    </header>
+    <div class="login-section">
+        <div class="title">
+            <p>Login</p>
+        </div>
+        <form class="login-form">
+            <label for="login-email">Email</label>
+            <input type="text" id="login-email" name="email" required>
+            
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" required>
+            
+            <div class="message" id="error" style="display: none;">
+                <p>Registration successful!</p>
+            </div>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

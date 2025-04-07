@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/filter-movies.css">
+    <title>Filter</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
+        </div>
+        
+        <nav class="nav-links">
+            <a href="/pages/filter-movie.html">Movie</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" class="nav-icon" id="user">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a href="#" class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="red-dot"></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="filter-box">
+            <select name="genre" id="genre">
+                <option value="top-genre" disabled selected>All Categories</option>
+                
+            </select>
+            <select name="language" id="language">
+                <option value="top-language" disabled selected>Language</option>
+
+            </select>
+            <select name="year" id="year">
+                <option value="top-year" disabled selected>Release Years</option>
+
+            </select>            
+            <select name="rating" id="rating">
+                <option value="top-rating" disabled selected>Rating Star</option>
+                <option value="5">5</option>
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+            </select>
+        </div>
+
+        <p class="filter-result">Total <span style="color: var(--primary-color);">8</span> Movies</p>
+
+        <div class="movies-list">
+
+        </div>
+
+        <!-- Phân trang -->
+        <div class="pagination">
+        <!-- Nút phân trang sẽ được chèn ở đây -->
+</div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/filter.js"></script>
+</body>
+</html>

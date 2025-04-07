@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <title>Sign Up</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <span class="logo">CinemaLogo</span>
+        <div class="search-box">
+            <button class="search-button">
+                <i class="fi fi-rr-search"></i>
+            </button>
+            <input type="text" class="search-input" placeholder="Search Movie..." />
+        </div>
+        
+        <nav class="nav-links">
+            <a href="/pages/filter-movie.html">Movie</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </nav>
+
+        <div class="nav-icons">
+            <a href="#" class="nav-icon" id="user">
+                <i class="fi fi-rr-user"></i>
+            </a>
+            <a href="#" class="nav-icon">
+                <i class="fi fi-rr-bell"></i>
+                <span class="var(--primary-color)-dot"></span>
+            </a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="register-section">
+            <div class="title">
+                <p>Register</p>
+            </div>
+            <form class="register-form" id="register-form">
+                <label for="fullname">Fullname</label>
+                <input type="text" id="fullname" name="fullname" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                
+                <div class="message" id="error" style="display: none;">
+                    <p>Registration successful!</p>
+                </div>
+                <div class="message" id="success" style="display: none;">
+                    <p>Registration successful!</p>
+                    <a href="/auth/signin.html">Login Now</a>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+            <p style="margin-top: 24px;">Already have an account? <a style="text-decoration: underline; color: var(--primary-color);" href="/auth/signin.html">Sign In</a></p>
+        </div>
+    </div>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+</html>
