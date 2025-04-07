@@ -285,6 +285,9 @@
 }
 
 .ads .ads-title {
+    display: flex;
+    width: max-content;
+    height: max-content;
     font-size: 32px;
     font-weight: 700;
     color: var(--text-color);
